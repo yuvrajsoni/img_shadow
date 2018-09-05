@@ -1,0 +1,46 @@
+body
+{
+	margin: 0;
+	padding: 0;
+}
+
+.sholder
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.simage
+{
+	width: 300px;
+	height: 300px;
+	display: inline-block;
+	margin: 20px;
+	background-size: cover;
+	border-radius: 8px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	position: relative;
+}
+
+.simage:after
+{
+	position: absolute;
+	top: 0; bottom: 0; left: 0; right: 0;
+	background: inherit;
+	filter: blur(20px) contrast(200%);
+	z-index: -1;
+	content: "";
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.5s;
+}
+
+.simage:hover:after
+{
+	opacity: 1;
+	visibility: visible;
+}
+
+/*project by @Yuvraj Soni*/
